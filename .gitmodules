@@ -1,0 +1,27 @@
+[submodule "vimfiles/bundle/bufexplorer"]
+	path = vimfiles/bundle/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
+[submodule "vimfiles/bundle/Colour-Sampler-Pack"]
+	path = vimfiles/bundle/Colour-Sampler-Pack
+	url = https://github.com/vim-scripts/Colour-Sampler-Pack.git
+[submodule "vimfiles/bundle/ctrlp.vim"]
+	path = vimfiles/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "vimfiles/bundle/sessionman.vim"]
+	path = vimfiles/bundle/sessionman.vim
+	url = https://github.com/vim-scripts/sessionman.vim
+[submodule "vimfiles/bundle/tlib_vim"]
+	path = vimfiles/bundle/tlib_vim
+	url = https://github.com/tomtom/tlib_vim
+[submodule "vimfiles/bundle/vim-addon-mw-utils"]
+	path = vimfiles/bundle/vim-addon-mw-utils
+	url = https://github.com/vim-scripts/vim-addon-mw-utils
+[submodule "vimfiles/bundle/vim-flake8"]
+	path = vimfiles/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8
+[submodule "vimfiles/bundle/snipmate.vim"]
+	path = vimfiles/bundle/snipmate.vim
+	url = https://github.com/msanders/snipmate.vim
+[submodule "vimfiles/bundle/vim-snippets"]
+	path = vimfiles/bundle/vim-snippets
+	url = https://github.com/honza/vim-snippets
