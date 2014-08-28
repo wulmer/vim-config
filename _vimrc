@@ -3,8 +3,11 @@
 execute pathogen#infect()
 
 " editor font
-set guifont=Consolas:h10:cDEFAULT
+set guifont=Consolas,Consolas:h10:cDEFAULT
 set encoding=utf-8
+
+" no toolbar
+set toolbar=
 
 " syntax highlighting on
 syntax on
@@ -22,6 +25,11 @@ set wildignore=
 set tabstop=4
 set shiftwidth=4
 set backspace=indent,eol,start
+set smarttab
+
+" tab switching with <ctrl><pageup> and <ctrl><pagedn>
+map <C-S-PageUp> :tabprevious<CR>
+map <C-S-PageDown> :tabnext<CR>
 
 " buffer switching with <tab> and <shift>-<tab>
 nnoremap <silent> <Tab> :bn<CR>
