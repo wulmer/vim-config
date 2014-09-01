@@ -15,6 +15,9 @@ syntax on
 " window size
 "set lines=69 columns=120
 
+" respect modeline
+set modeline
+
 " No tool bar in GUI
 set guioptions-=T
 
