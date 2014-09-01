@@ -74,8 +74,8 @@ set undoreload=10000
 " line numbers
 set number
 
-" colored column at 76 chars
-"set colorcolumn=76
+" colored column at 78 chars
+set colorcolumn=78
 
 " highlight current line, no cursor blinking
 set cursorline
