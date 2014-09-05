@@ -6,9 +6,6 @@ execute pathogen#infect()
 set guifont=Consolas,Consolas:h10:cDEFAULT
 set encoding=utf-8
 
-" no toolbar
-set toolbar=
-
 " syntax highlighting on
 syntax on
 
