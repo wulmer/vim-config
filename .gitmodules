@@ -31,3 +31,12 @@
 [submodule "vimfiles/bundle/vim-snipmate"]
 	path = vimfiles/bundle/vim-snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "vimfiles/bundle/vim-ps1"]
+	path = vimfiles/bundle/vim-ps1
+	url = https://github.com/PProvost/vim-ps1
+[submodule "vimfiles/bundle/vim-actionscript"]
+	path = vimfiles/bundle/vim-actionscript
+	url = https://github.com/jeroenbourgois/vim-actionscript
+[submodule "vimfiles/bundle/modelica"]
+	path = vimfiles/bundle/modelica
+	url = https://github.com/vim-scripts/modelica
