@@ -1,5 +1,15 @@
-﻿scriptencoding utf-8
+﻿" Use Vim settings rather than vi settings
+set nocompatible
 
+scriptencoding utf-8
+
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before vundle starts loading all
+" the plugins.
+let mapleader=","
+
+" load bundled plugins
 execute pathogen#infect()
 
 " editor font
@@ -18,8 +28,20 @@ set modeline
 " No tool bar in GUI
 set guioptions-=T
 
-" ignore pattern for wildcards
-set wildignore=
+" Show incomplete commands
+set showcmd
+
+" Show current mode
+set showmode
+
+" Visual bell, no sound
+set visualbell
+
+" wildcards
+set wildmode=list:longest
+set wildmenu
+set wildignore=*.o,*.obj,*~
+set wildignore=*.png,*.jpg,*.gif
 
 " tab stops
 set tabstop=4
@@ -62,11 +84,13 @@ autocmd Filetype *
 endif
 
 " persistent undo
-au BufReadPre C:/MSE/* setlocal undofile
-au BufReadPre C:/home/* setlocal undofile
-set undodir=C:/home/vimundo/,.
-set undolevels=1000
-set undoreload=10000
+if has('persistent undo')
+	au BufReadPre C:/MSE/* setlocal undofile
+	au BufReadPre C:/home/* setlocal undofile
+	set undodir=C:/home/vimundo/,.
+	set undolevels=1000
+	set undoreload=10000
+endif
 
 " line numbers
 set number
@@ -93,7 +117,13 @@ set scrolloff=2
 set wildmode=longest,list
 
 " auto indentation
+set autoindent
 set smartindent
+
+" fold method
+set foldmethod=indent
+set foldnestmax=3
+set nofoldenable
 
 " auto change dir to file in buffer
 " set autochdir
@@ -103,6 +133,7 @@ colorscheme wombat
 
 " ftplugin on - e.g. for python_flake8
 filetype plugin on
+filetype indent on
 
 " status line
 set laststatus=2
