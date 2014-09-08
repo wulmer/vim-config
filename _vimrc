@@ -149,7 +149,7 @@ hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 "    ˽ (Unicode 02FD)
 
 set list
-set listchars=tab:▸ 
+set listchars=tab:· 
 set listchars+=trail:˽
 
 
