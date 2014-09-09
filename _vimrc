@@ -13,7 +13,11 @@ let mapleader=","
 execute pathogen#infect()
 
 " editor font
-set guifont=Consolas,Consolas:h10:cDEFAULT
+if has('gui_win32')
+    set guifont=Consolas,Consolas:h10:cDEFAULT
+elseif has('gui_gtk')
+    set guifont=Liberation\ Mono\ 10
+endif
 set encoding=utf-8
 
 " syntax highlighting on
@@ -96,7 +100,9 @@ endif
 set number
 
 " colored column at 78 chars
-set colorcolumn=78
+if version >= 703
+    set colorcolumn=78
+endif
 
 " highlight current line, no cursor blinking
 set cursorline
