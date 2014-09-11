@@ -57,6 +57,9 @@ set smarttab
 map <C-S-PageUp> :tabprevious<CR>
 map <C-S-PageDown> :tabnext<CR>
 
+" highlight search toggle
+nnoremap <silent> <C-H> :set invhlsearch<CR>
+
 " buffer switching with <tab> and <shift>-<tab>
 nnoremap <silent> <Tab> :bn<CR>
 nnoremap <silent> <S-Tab> :bp<CR>
