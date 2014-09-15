@@ -91,7 +91,7 @@ autocmd Filetype *
 endif
 
 " persistent undo
-if has('persistent undo')
+if has('persistent_undo')
 	au BufReadPre C:/MSE/* setlocal undofile
 	au BufReadPre C:/home/* setlocal undofile
 	set undodir=C:/home/vimundo/,.
