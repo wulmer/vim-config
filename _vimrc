@@ -7,7 +7,7 @@ scriptencoding utf-8
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
 " the plugins.
-let mapleader=","
+let mapleader="\<Space>"
 
 " load bundled plugins
 execute pathogen#infect()
@@ -72,15 +72,9 @@ nnoremap <silent> <F12> :BufExplorer<CR>
 " show SessionList with <F11>
 nnoremap <silent> <F11> :SessionList<CR>
 
-" Append modeline after last line in buffer.
-" Use substitute() (not printf()) to handle '%%s' modeline in LaTeX files.
-function! AppendModeline()
-	let save_cursor = getpos('.')
-	let append = ' vim: set ts='.&tabstop.' sw='.&shiftwidth.' tw='.&textwidth.': '
-	$put =substitute(&commentstring, '%s', append, '')
-	call setpos('.', save_cursor)
-endfunction
-nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+" easily fold and unfold
+nnoremap <silent> <Leader>fe :set foldenable<CR>
+nnoremap <silent> <Leader>fd :set nofoldenable<CR>
 
 " omni completion
 if has("autocmd") && exists("+omnifunc")
