@@ -40,3 +40,6 @@
 [submodule "vimfiles/bundle/modelica"]
 	path = vimfiles/bundle/modelica
 	url = https://github.com/vim-scripts/modelica
+[submodule "vimfiles/bundle/jedi-vim"]
+	path = vimfiles/bundle/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
