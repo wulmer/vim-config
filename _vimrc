@@ -7,13 +7,17 @@ scriptencoding utf-8
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all
 " the plugins.
-let mapleader=","
+let mapleader="\<Space>"
 
 " load bundled plugins
 execute pathogen#infect()
 
 " editor font
-set guifont=Consolas,Consolas:h10:cDEFAULT
+if has('gui_win32')
+    set guifont=Consolas,Consolas:h10:cDEFAULT
+elseif has('gui_gtk')
+    set guifont=Liberation\ Mono\ 10
+endif
 set encoding=utf-8
 
 " syntax highlighting on
@@ -53,6 +57,9 @@ set smarttab
 map <C-S-PageUp> :tabprevious<CR>
 map <C-S-PageDown> :tabnext<CR>
 
+" highlight search toggle
+nnoremap <silent> <C-H> :set invhlsearch<CR>
+
 " buffer switching with <tab> and <shift>-<tab>
 nnoremap <silent> <Tab> :bn<CR>
 nnoremap <silent> <S-Tab> :bp<CR>
@@ -65,15 +72,9 @@ nnoremap <silent> <F12> :BufExplorer<CR>
 " show SessionList with <F11>
 nnoremap <silent> <F11> :SessionList<CR>
 
-" Append modeline after last line in buffer.
-" Use substitute() (not printf()) to handle '%%s' modeline in LaTeX files.
-function! AppendModeline()
-	let save_cursor = getpos('.')
-	let append = ' vim: set ts='.&tabstop.' sw='.&shiftwidth.' tw='.&textwidth.': '
-	$put =substitute(&commentstring, '%s', append, '')
-	call setpos('.', save_cursor)
-endfunction
-nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+" easily fold and unfold
+nnoremap <silent> <Leader>fe :set foldenable<CR>
+nnoremap <silent> <Leader>fd :set nofoldenable<CR>
 
 " omni completion
 if has("autocmd") && exists("+omnifunc")
@@ -84,7 +85,7 @@ autocmd Filetype *
 endif
 
 " persistent undo
-if has('persistent undo')
+if has('persistent_undo')
 	au BufReadPre C:/MSE/* setlocal undofile
 	au BufReadPre C:/home/* setlocal undofile
 	set undodir=C:/home/vimundo/,.
@@ -96,7 +97,9 @@ endif
 set number
 
 " colored column at 78 chars
-set colorcolumn=78
+if version >= 703
+    set colorcolumn=78
+endif
 
 " highlight current line, no cursor blinking
 set cursorline
@@ -149,7 +152,7 @@ hi User1 term=inverse,bold cterm=inverse,bold ctermfg=red
 "    ˽ (Unicode 02FD)
 
 set list
-set listchars=tab:▸ 
+set listchars=tab:· 
 set listchars+=trail:˽
 
 
