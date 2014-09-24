@@ -132,7 +132,8 @@ set nofoldenable
 " set autochdir
 
 " color scheme
-colorscheme wombat
+"colorscheme wombat
+colorscheme atom
 
 " ftplugin on - e.g. for python_flake8
 filetype plugin on

@@ -42,4 +42,7 @@
 	url = https://github.com/vim-scripts/modelica
 [submodule "vimfiles/bundle/jedi-vim"]
 	path = vimfiles/bundle/jedi-vim
-	url = git@github.com:davidhalter/jedi-vim.git
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vimfiles/bundle/Atom"]
+	path = vimfiles/bundle/Atom
+	url = https://github.com/gregsexton/Atom.git
