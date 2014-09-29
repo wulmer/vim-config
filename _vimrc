@@ -24,7 +24,8 @@ set encoding=utf-8
 syntax on
 
 " window size
-"set lines=69 columns=120
+"set lines=69 columns=124
+set columns=124 lines=40
 
 " respect modeline
 set modeline
@@ -156,6 +157,6 @@ set list
 set listchars=tab:· 
 set listchars+=trail:˽
 
-
 " ctrlp plugin
 let g:ctrlp_cmd='CtrlPMixed'
+
