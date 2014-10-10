@@ -97,9 +97,9 @@ endif
 " line numbers
 set number
 
-" colored column at 78 chars
+" colored column at 79 chars
 if version >= 703
-    set colorcolumn=78
+    set colorcolumn=79
 endif
 
 " highlight current line, no cursor blinking
@@ -122,7 +122,7 @@ set wildmode=longest,list
 
 " auto indentation
 set autoindent
-set smartindent
+set cindent
 
 " fold method
 set foldmethod=indent
@@ -160,3 +160,5 @@ set listchars+=trail:˽
 " ctrlp plugin
 let g:ctrlp_cmd='CtrlPMixed'
 
+" vim-markdown plugin
+let g:vim_markdown_folding_disabled=1
