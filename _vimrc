@@ -10,7 +10,9 @@ scriptencoding utf-8
 let mapleader="\<Space>"
 
 " load bundled plugins
-execute pathogen#infect()
+if version >= 710
+	execute pathogen#infect()
+endif
 
 " editor font
 if has('gui_win32')
@@ -134,7 +136,7 @@ set nofoldenable
 
 " color scheme
 "colorscheme wombat
-colorscheme atom
+silent! colorscheme atom
 
 " ftplugin on - e.g. for python_flake8
 filetype plugin on
