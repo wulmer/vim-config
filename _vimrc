@@ -10,7 +10,7 @@ scriptencoding utf-8
 let mapleader="\<Space>"
 
 " load bundled plugins
-if version >= 710
+if version >= 701
 	execute pathogen#infect()
 endif
 
