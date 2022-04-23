@@ -27,7 +27,9 @@ syntax on
 
 " window size
 "set lines=69 columns=124
-set columns=124 lines=40
+if has('gui_running')
+    set columns=124 lines=40
+endif
 
 " respect modeline
 set modeline
